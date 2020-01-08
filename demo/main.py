@@ -1,5 +1,6 @@
 from machine import I2C, Pin, ADC, UART
-import time, utime
+import time
+import utime
 import network
 import _thread
 import server
@@ -102,16 +103,11 @@ def do_display():
     _thread.start_new_thread(update_display, (display, ))
 
 def do_relay():
-    print('Starting Relay')
-
-    while True:)
-
-do_lig
+    while True:
         do_relayOn()
-        time.sleep(60)
+        time.sleep(10000)
         do_relayOff()
-        time.sleep(60)
-
+        time.sleep(10000)
 
 def do_relayOn():
     pinOn = Pin(13, Pin.OUT)
@@ -123,7 +119,9 @@ def do_relayOff():
     pinOff = Pin(12, Pin.OUT)
     pinOff.value(1)
     time.sleep_ms(50)
-    pinOff.value(0ht_demo()
+    pinOff.value(0)
+
+
 do_display()
 do_connect()
 _thread.start_new_thread(do_relay, ())
