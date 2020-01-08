@@ -55,6 +55,7 @@ def generate_html(set_by):
     return html
 
 def start_service(do_lightOn, do_lightOff):
+    global lastCaller
     addr = socket.getaddrinfo("0.0.0.0", 80)[0][-1]
 
     s = socket.socket()
