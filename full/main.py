@@ -4,8 +4,6 @@ import network
 import _thread
 import server
 
-import ssd1306
-
 from neopixel import NeoPixel
 
 print('Welcome from IDA Horsens and IDA IT Gruppen Oestjylland')
